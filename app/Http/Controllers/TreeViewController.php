@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 class TreeViewController extends Controller
 {
     public function loadByUser($id=null){
-       $users = User::all();
-       dd($users);
+       $user = User::find(108);
+       $affiliate = Affiliate::find(92);
+       dd($user);
     }
 }
