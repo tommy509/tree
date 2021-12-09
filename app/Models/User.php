@@ -29,7 +29,7 @@ class User extends Authenticatable
 
 
     public function affiliate(){
-        return $this->hasOne('App\Models\Affiliate', 'uid', 'id');
+        return $this->hasOne('App\Models\Affiliate', 'uid','ID');
     }
 
     /**

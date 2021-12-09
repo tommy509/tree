@@ -14,8 +14,12 @@ class Affiliate extends Model
 
 
     public function user(){
-        return $this->belongsTo('App\Models\User', 'id', 'uid');
-        
+        return $this->belongsTo('App\Models\User', 'uid', 'id');
     }
 
+    public function referrals(){
+        return $this->hasMany('App\Models\Referral', 'affiliate_id', 'id');
+    }
+
+ 
 }
